@@ -18,7 +18,7 @@ N_cond(t,k,m)$(N_out(t-ord(k),k,m)>0)=1;
 $macro k_cond(n,m) ((ord(m)>=ord(n)-K_dis(n)) and (ord(m)<=ord(n)+K_ch(n)))
 $macro x_in_sparse1 (ord(n)>=N_min)
 $macro x_out_sparse1(n,m) (ord(m)<=ord(n) and N_out(t,k,m)>0)
-$macro x_out_sparse2 (ord(k)<ord(t) and N_cond(t,k,m)>0)
+$macro x_out_sparse2 (N_cond(t,k,m)>0)
 $macro energy (ord(k)>card(t)-ord(t) and ord(m)>=ord(n) and N_out(t,k,n)>0)
 * Macro for hours is defined in input_data.gms.
 

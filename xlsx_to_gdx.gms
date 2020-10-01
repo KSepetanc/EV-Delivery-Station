@@ -1,7 +1,7 @@
 * Txt script
 $onecho > input_data_copy.txt
-i=Transport_station.xlsx
-o=Transport_station.gdx
+i=data.xlsx
+o=data.gdx
 
 par=N_start              rng=N_start!a2                  Rdim=1 Cdim=0
 par=Eta                  rng=Eta!a1:v22                  Rdim=1 Cdim=1

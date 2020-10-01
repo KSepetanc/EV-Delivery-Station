@@ -13,7 +13,7 @@ $macro hours (mod(ord(t),4)=1)
 
 parameter N_start(n),N_out(t,k,n),Eta(n,m),Lambda_week(w,t),K_ch(n),K_dis(n),N_clus;
 * Load data from GDX. GDX is created using xlsx_to_gdx.gms from excel.
-$gdxin Transport_station.gdx
+$gdxin data.gdx
 $load N_start,N_out,Eta,Lambda_week
 $gdxin
 
