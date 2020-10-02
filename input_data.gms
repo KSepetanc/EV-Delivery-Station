@@ -29,12 +29,12 @@ Lambda(t)$hours=sum(w,Lambda_week(w,t))/card(w);
 
 parameter Gamma /8/;        //Uncertanty budget
 parameter Delta_lambda(t);  //Price change interval, €/MWh
-Delta_lambda(t)$hours=smax(w,abs(Lambda_week(w,t)-Lambda(t)))*0.5;
+Delta_lambda(t)$hours=smax(w,abs(Lambda_week(w,t)-Lambda(t)));
 
 parameter C_bat/0.044/;     //Battery capacity, MWh
 parameter Delta/60/;        //Battery degradation cost, ï¿½/MWh
 parameter N_min/5/;         //Vheicles minimum returning SoE cluster, 5th cluster -> 20% SoE
-parameter N_ch/100/;         //Maximum number of vehicles that charge simultaneously.
+parameter N_ch/200/;         //Maximum number of vehicles that charge simultaneously.
 
 * Shift N_out to match paper definition.
          //Offset time for handling and uncertinty

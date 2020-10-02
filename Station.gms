@@ -22,6 +22,14 @@ $macro x_out_sparse2 (N_cond(t,k,m)>0)
 $macro energy (ord(k)>card(t)-ord(t) and ord(m)>=ord(n) and N_out(t,k,n)>0)
 * Macro for hours is defined in input_data.gms.
 
+*Set variable bounds
+parameter n_start_tot;
+n_start_tot=sum(n,n_start(n));
+n_bat.up(t,n)=n_start_tot;
+n_aux.up(t,n,m)$k_cond(n,m)=n_start_tot;
+x_in.up(t,n)=n_start_tot;
+x_out.up(t,k,n,m)$x_out_sparse1(m,n)=n_start_tot;
+
 * Limit minimum SoE cluster for outgoing EVs.
 x_out.fx(t,k,n,m)$(ord(m)<21 and N_out(t,k,n)>0 and ord(m)>=ord(n))=0;
 
@@ -61,14 +69,6 @@ model Station /All/;
 option optcr=0.001;
 option threads=4;
 option mip = gurobi;
-
-*Set variable bounds
-parameter n_start_tot;
-n_start_tot=sum(n,n_start(n));
-n_bat.up(t,n)=n_start_tot;
-n_aux.up(t,n,m)$k_cond(n,m)=n_start_tot;
-x_in.up(t,n)=n_start_tot;
-x_out.up(t,k,n,m)$x_out_sparse1(m,n)=n_start_tot;
 
 * Use solver's barrier algorithm for more difficult models, e.g. a week or a month simulated.
 file opt1 gurobi option file /gurobi.opt/;
