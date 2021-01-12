@@ -1,9 +1,29 @@
 [RP:STATION]
 1=
 
-[OPENWINDOW_1]
+[RP:MAIN]
+1=
 
-MAXIM=0
+[RP:STATION_MPC]
+1=
+
+[RP:INPUT_DATA]
+1=
+
+[RP:XLSX_TO_GDX]
+1=
+
+[RP:STATION_DAY-AHEAD]
+1=
+
+[OPENWINDOW_1]
+FILE0=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\input_data.gms
+FILE1=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\Station_day-ahead.gms
+FILE2=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\Station_day-ahead.lst
+FILE3=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\Station_MPC.gms
+FILE4=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\xlsx_to_gdx.gms
+FILE5=C:\Users\karlo\OneDrive - fer.hr\Optimization\Cluster_BSS\PSCC\Delivery station publish\EV-Delivery-Station\Station_day-ahead.lst
+MAXIM=1
 TOP=50
 LEFT=50
 HEIGHT=400
